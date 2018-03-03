@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Football</title>
+    <link rel="stylesheet" type="text/css" href="design.css" />
+    <script>
+        function getID() {
+            var x = document.forms["form1"]["ID"].value;
+            return x;
+        }
+    </script>
+</head>
+<body style=" background-image: url('ball.jpg')">
+    <h1 style="color: black" >Welcome to our site :D</h1>
+
+    <br><br><br>
+
+    <a href="/leagues"> Leagues</a>                      <br><br>
+    <form name ="form1" onsubmit="return getID()" action="/leaguesid" method="get">
+        Leagues with ID: <input type="text" name="ID" id="ID">
+                 <input type="submit" value="search">
+    </form>
+    <br><br><br>
+
+    <a href="/leagues/444/teams">Teams of leagues with id = 444</a>  <br>
+    <a href="/teams/444/players">Players of teams with id = 444</a>  <br>
+    <a href="/teams/444/fixtures">Fixtures of teams with id = 444</a>
+
+</body>
+</html>
